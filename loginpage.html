@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logincss.css">
+</head>
+<body>
+    <h1 class="center">LOGIN PAGE</h1>
+    <br>
+    <center>
+        <img src="./sbiposterjpg-1578907216823.jpeg" >
+    </center>
+    <div class="box">
+        <form id="formLOGIN">
+            <p >A/c number:<input type='number' required="*" id="acccount" value="123456"></p>
+            <p>Password:<input type='password' required="*" id="password" value="password"></p>
+            <center><input type="submit" id="btn" ></center>
+        </form>
+        <script>
+            const form = document.querySelector('#formLOGIN');
+
+            form.addEventListener('submit', (event) => {
+              event.preventDefault(); // prevent the form from submitting
+            
+              const password = form.password.value; // get the password value
+              //const ac_number  = form.number.value;
+            
+              if (password == 'password' ) {
+                // password is correct, allow the user to proceed to the next page
+                window.location = 'final2ndpage.html';
+              } else {
+                // password is incorrect, display an error message
+                alert('Incorrect ');
+              }
+            });
+        </script>
+    </div>
+</body>
+</html>
